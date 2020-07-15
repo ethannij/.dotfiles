@@ -66,3 +66,6 @@ usually fixes this problem.
 By default, the i3 mod key is alt.  
 The power menu is an internal module of polybar, however, I have not gotten it to work for myself (good luck).  
 If you have any questions, DM me on twitter @ethannij.  
+  
+Rofi window menu now functions with alt+tab  
+Rofi drun menu is alt+space
