@@ -41,8 +41,16 @@ Unzip the "scripts.zip" and place them in your home directory.
 You should edit each script to ensure they are compatible with you (not me).  
 Make sure they are executable  
   
-# Configuration  
+What do they do?  
   
+hide polybar when fullscreen  
+tile in a spiral pattern  
+`autoscript $NAME` creates an executable .sh script in the scrips directory  
+updates pacman and removes orphaned packages from polybar  
+connects to ssh server from polybar  
+open timeshift from polybar  
+  
+# Configuration  
 Within the `~/.config/i3/config`, you should change the feh path, to match your wallpaper.  
 Within the `~/.config/polybar/config`, add and remove modules if you would like. the font "font-awesome" is required to use the icons at the top of the screen.  
 If you experience lag, picom is most likely responisible. Commenting out  
