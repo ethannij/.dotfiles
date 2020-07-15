@@ -1,7 +1,9 @@
 # .dotfiles  
   
---These are my dotfiles as of now, they will be updated and fixed but here is what ive got right now. This is my first time using a tiling window manager so I am no expert.
-
+--These are my dotfiles as of now, they will be updated and fixed but here is what ive got right now. This is my first time using a tiling window manager so I am no expert.  
+  
+https://imgur.com/a/cuYutwL
+  
 #  Programs  
 As of now, the programs I customize in my dotfiles are:  
 ```  
