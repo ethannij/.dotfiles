@@ -1,26 +1,26 @@
-#i3 config
+#Startup Apps
+
 exec polybar example
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id $HOME/scripts/i3listen.py
-exec feh --bg-scale $HOME/pix/WallpaperRetro.jpg
+exec --no-startup-id feh --bg-scale $HOME/pix/WallpaperRetro.jpg
 exec picom --experimental-backends --backend glx &
 exec discord &
 exec telegram-desktop &
 exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/scripts/alternating_layouts.py
 exec --no-startup-id dunst &
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+font pango:monospace 16
+
+#Key Bindings
 set $mod Mod1
 
 
-font pango:monospace 16
 
 
 
-
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-
-exec --no-startup-id nm-applet
 
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -41,7 +41,7 @@ bindsym $mod+Shift+q kill
 
 
 bindsym $mod+space exec rofi -show drun -font "monospace 18" -show-icons
-bindsym $mod+tab exec rofi -show window -font "monospace 18" -show-icons
+bindsym $mod+Tab exec rofi -show window -font "monospace 18" -show-icons
 
 
 
@@ -153,7 +153,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
- 	gaps inner 10
-        gaps outer 15
+
+####### i3-gaps ########
+#for_window [class=".*"] border pixel 2 #*
+gaps inner 10
+gaps outer 15
+########################
+
+####### i3-radius ######
+#smart_borders on
+#smart_borders no_gaps
+border_radius 4
+########################
 
 #syntax:ssHash
