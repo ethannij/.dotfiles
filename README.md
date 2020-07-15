@@ -37,6 +37,7 @@ The hard way, is to manually move each config folder into your desired directory
 # Scripts  
 Unzip the "scripts.zip" and place them in your home directory.  
 You should edit each script to ensure they are compatible with you (not me).  
+Make sure they are executable  
   
 # Configuration  
   
