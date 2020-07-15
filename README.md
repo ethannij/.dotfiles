@@ -4,7 +4,7 @@
 
 #  Programs  
 As of now, the programs I customize in my dotfiles are:  
-```
+```  
 alacritty - terminal  
 dunst - notifications  
 i3 - tiling window manager  
@@ -13,8 +13,8 @@ picom - compositor
 polybar - status bar  
 zsh - shell (with ohmyzsh, and powerlevel10k)  
 .Xresources - customize rofi (place in home directory)  
-```
-
+```  
+  
 # Installation - Easy Way  
 The easiest way to use my dotfiles is using stow.  
 `git clone https://github.com/ethannij/.dotfiles.git` - to your home folder  
@@ -23,9 +23,9 @@ Per each config you would like to copy:
 `stow --adopt -nvSt ~ *programfolder*`  
 If the directory exists, delete your current config folder (or move/rename)  
 `stow --adopt -vSt ~ *programfolder*`  
-  
+   
 Example:  
-`stow --adopt -nvSt ~ *alacritty*`
+`stow --adopt -nvSt ~ *alacritty*`  
 `rm -rf ~/.config/alacritty`  
 `stow --adopt -vSt ~ *alacritty*`  
   
