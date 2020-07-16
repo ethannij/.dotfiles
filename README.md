@@ -11,7 +11,7 @@ alacritty - terminal
 dunst - notifications  
 i3 - tiling window manager  
 lf - terminal based file browser  
-picom - compositor  
+picom - compositor  (picom-ibhagwan-git) from the aur for blur
 polybar - status bar  
 zsh - shell (with ohmyzsh, and powerlevel10k)  
 .Xresources - customize rofi (place in home directory)  
@@ -53,16 +53,8 @@ open timeshift from polybar
 # Configuration  
 Within the `~/.config/i3/config`, you should change the feh path, to match your wallpaper.  
 Within the `~/.config/polybar/config`, add and remove modules if you would like. the font "font-awesome" is required to use the icons at the top of the screen.  
-If you experience lag, picom is most likely responisible. Commenting out  
-```
-blur:
-{
-  method = "gaussian";
-  size = 50;
-  deviation = 20;
-};
-```  
-usually fixes this problem.  
+Picom blur has been switched from Gaussian, to kawase for performance.
+  
 By default, the i3 mod key is alt.  
 The power menu is an internal module of polybar, however, I have not gotten it to work for myself (good luck).  
 If you have any questions, DM me on twitter @ethannij.  
