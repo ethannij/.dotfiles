@@ -55,9 +55,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=30;1
-font-1 = FontAwesome5Free:style=Solid:pixelsize=30:antialias=false;3
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=30:antialias=false;3
+font-0 = fixed:pixelsize=15;1
+font-1 = FontAwesome5Free:style=Solid:pixelsize=15:antialias=false;3
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=15:antialias=false;3
 
 modules-left = date i3 pacman ssh timeshift
 modules-center = xwindow
