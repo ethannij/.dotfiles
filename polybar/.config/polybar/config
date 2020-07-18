@@ -59,9 +59,9 @@ font-0 = fixed:pixelsize=15;1
 font-1 = FontAwesome5Free:style=Solid:pixelsize=15:antialias=false;3
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=15:antialias=false;3
 
-modules-left = date bspwm i3 pacman ssh timeshift volume
+modules-left = date i3 pacman ssh timeshift
 modules-center = xwindow
-modules-right = memory cpu temperature powermenu
+modules-right = pulseaudio memory cpu temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -296,12 +296,14 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
 
-format-volume = <label-volume> <bar-volume>
-label-volume =  %percentage%%
+format-volume = <label-volume>
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 
+label-muted = 🔇 muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -321,11 +323,13 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+click-right = alacritty -e $HOME/scripts/pavu.sh
+
 [module/alsa]
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%
+label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
