@@ -32,7 +32,7 @@ red = #f50a4d
 
 
 [bar/example]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:DP-2}
 width = 100%
 height = 56
 ;offset-x = 1%
@@ -59,15 +59,9 @@ font-0 = fixed:pixelsize=30;1
 font-1 = FontAwesome5Free:style=Solid:pixelsize=30:antialias=false;3
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=30:antialias=false;3
 
-<<<<<<< HEAD
 modules-left = date i3 pacman ssh timeshift
 modules-center = xwindow
 modules-right = pulseaudio memory cpu temperature powermenu
-=======
-modules-left = date bspwm i3 pacman timeshift
-modules-center = xwindow
-modules-right = battery memory cpu temperature powermenu
->>>>>>> 5f736f98b83360f5eb07ad800dbfd818d09a3f70
 
 tray-position = right
 tray-padding = 2
