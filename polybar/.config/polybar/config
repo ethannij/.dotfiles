@@ -34,7 +34,7 @@ red = #f50a4d
 [bar/example]
 monitor = ${env:MONITOR:DP-2}
 width = 100%
-height = 56
+height = 28
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
