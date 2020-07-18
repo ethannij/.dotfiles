@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+PATH="$HOME/scripts:$PATH"
+export PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ethannij/.oh-my-zsh"
 
@@ -39,8 +42,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
+# DISABLE_APATH="$HOME/scripts:$PATH"
+export PATH
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -61,8 +64,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
+#ZSH_CUSTOM=$HOME/scripts
+#PATH="$HOME/scripts:$PATH"
+#export PATH
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/

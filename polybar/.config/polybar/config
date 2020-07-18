@@ -59,7 +59,7 @@ font-0 = fixed:pixelsize=15;1
 font-1 = FontAwesome5Free:style=Solid:pixelsize=15:antialias=false;3
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=15-:antialias=false;3
 
-modules-left = date i3 pacman ssh timeshift
+modules-left = date i3 pacman ssh timeshift virt
 modules-center = xwindow
 modules-right = pulseaudio memory cpu temperature powermenu
 
@@ -83,6 +83,14 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+
+[module/virt]
+click-left = alacritty -e $HOME/scripts/virtualmachine
+type = custom/text
+content =
+tail = true
+label = virt
+interval 10
 
 [module/timeshift]
 click-left = alacritty -e $HOME/scripts/timeshiftgui
