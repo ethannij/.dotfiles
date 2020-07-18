@@ -32,9 +32,9 @@ red = #f50a4d
 
 
 [bar/example]
-monitor = ${env:MONITOR:DP-2}
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 28
+height = 56
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -55,13 +55,19 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=15;1
-font-1 = FontAwesome5Free:style=Solid:pixelsize=15:antialias=false;3
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=15:antialias=false;3
+font-0 = fixed:pixelsize=30;1
+font-1 = FontAwesome5Free:style=Solid:pixelsize=30:antialias=false;3
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=30:antialias=false;3
 
+<<<<<<< HEAD
 modules-left = date i3 pacman ssh timeshift
 modules-center = xwindow
 modules-right = pulseaudio memory cpu temperature powermenu
+=======
+modules-left = date bspwm i3 pacman timeshift
+modules-center = xwindow
+modules-right = battery memory cpu temperature powermenu
+>>>>>>> 5f736f98b83360f5eb07ad800dbfd818d09a3f70
 
 tray-position = right
 tray-padding = 2
@@ -365,13 +371,13 @@ format-charging-underline = #ffb52a
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 

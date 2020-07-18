@@ -12,10 +12,16 @@
 
 exec polybar example
 exec --no-startup-id $HOME/scripts/i3listen.py
-exec --no-startup-id feh --bg-scale $HOME/pix/WallpaperRetro.jpg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/WallpaperRetro.png
 exec picom --blur-method dual_kawase &
+<<<<<<< HEAD
 #exec discord -b
 #exec telegram-desktop -b
+=======
+#exec discord &
+#exec telegram-desktop &
+exec --no-startup-id nm-applet
+>>>>>>> 5f736f98b83360f5eb07ad800dbfd818d09a3f70
 exec --no-startup-id $HOME/scripts/alternating_layouts.py
 exec --no-startup-id dunst &
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -163,6 +169,7 @@ gaps outer 15
 #smart_borders no_gaps
 border_radius 4
 
+<<<<<<< HEAD
 
 # >>> Plasma Integration <<<
 
@@ -191,3 +198,29 @@ border_radius 4
 ##for_window [window_type="menu"] floating enable
 ##no_focus [class=”plasmashell”]
 #syntax:ssHash
+=======
+#syntax:ssHash
+#
+
+# >>> Plasma Integration <<<
+#Try to kill the wallpaper set by Plasma (it takes up the entire workspace
+# and hides everythiing)
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+# Avoid tiling popups, dropdown windows from plasma
+for_window [class="plasmashell"] floating enable
+for_window [class="Plasma"] floating enable
+for_window [class="krunner"] floating enable
+for_window [class="Kmix"] floating enable
+for_window [class="Klipper"] floating enable
+for_window [class="Plasmoidviewer"] floating enable
+# >>> Window Rules <<<
+# >>> Avoid tiling for non-Plasma stuff <<<
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_role="About"] floating enable 
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+>>>>>>> 5f736f98b83360f5eb07ad800dbfd818d09a3f70
