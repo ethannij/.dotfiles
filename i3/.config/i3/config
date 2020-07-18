@@ -12,7 +12,7 @@
 
 exec polybar example
 exec --no-startup-id $HOME/scripts/i3listen.py
-exec --no-startup-id feh --bg-scale $HOME/Pictures/WallpaperRetro.png
+exec --no-startup-id feh --bg-scale $HOME/pix/WallpaperRetro.png
 exec picom --blur-method dual_kawase &
 #exec discord &
 #exec telegram-desktop &
