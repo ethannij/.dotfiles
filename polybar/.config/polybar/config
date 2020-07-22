@@ -19,11 +19,12 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #222
+#background = #bfbfbf
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #66ff66
 secondary = #e60053
 alert = #bd2c40
 blue = #3399ff
@@ -56,12 +57,12 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=15;1
-font-1 = FontAwesome5Free:style=Solid:pixelsize=15:antialias=false;3
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=15-:antialias=false;3
+font-1 = FontAwesome5Free:style=Solid:pixelsize=15:antialias=true;3
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=15-:antialias=true;3
 
-modules-left = date i3 pacman ssh timeshift virt volume
-modules-center = xwindow
-modules-right = pulseaudio memory cpu temperature powermenu
+modules-left = i3 pacman ssh timeshift virt volume
+modules-center = xwindow 
+modules-right = pulseaudio memory cpu date powermenu 
 
 tray-position = right
 tray-padding = 2
@@ -90,7 +91,7 @@ type = custom/text
 content =
 tail = true
 label = virt
-interval 10
+#interval 10
 
 [module/timeshift]
 click-left = alacritty -e $HOME/scripts/timeshiftgui
@@ -98,7 +99,7 @@ type = custom/text
 content =
 tail = true
 lable = timeshift
-interval 10
+#interval 10
 
 [module/pacman]
 click-left = alacritty -e $HOME/scripts/pacmaintenance
@@ -106,13 +107,13 @@ type = custom/text
 content =
 tail = true
 label = pacman
-interval 10
+#interval 10
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix label-focused-background = ${colors.background-alt}
+#format-prefix label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}= " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
@@ -200,7 +201,7 @@ type = custom/text
 content =
 tail = true
 label = volume
-interval 10
+#interval 10
 
 [module/ssh]
 click-left = alacritty -e $HOME/scripts/serverconnect
@@ -208,7 +209,7 @@ type = custom/text
 content =
 tail = true
 lable = SSH 
-interval 10
+#interval 10
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -244,7 +245,7 @@ label =  %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground 
+#format-prefix-foreground 
 format-underline = #00cc66
 label =  %percentage_used%%
 
@@ -286,6 +287,90 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/mpd]
+type = internal/mpd
+
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600 
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 2
+
+; Available tags:
+;   <label-song> (default)
+;   <label-time>
+;   <bar-progress>
+;   <toggle> - gets replaced with <icon-(pause|play)>
+;   <toggle-stop> - gets replaced with <icon-(stop|play)>
+;   <icon-random>
+;   <icon-repeat>
+;   <icon-repeatone> (deprecated)
+;   <icon-single> - Toggle playing only a single song. Replaces <icon-repeatone>
+;   <icon-consume>
+;   <icon-prev>
+;   <icon-stop>
+;   <icon-play>
+;   <icon-pause>
+;   <icon-next>
+;   <icon-seekb>
+;   <icon-seekf>
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+;format-playing = ${self.format-online}
+;format-paused = ${self.format-online}
+;format-stopped = ${self.format-online}
+
+; Available tags:
+;   <label-offline>
+; Default: ""
+;format-offline = <label-offline>
+
+; Available tokens:
+;   %artist%
+;   %album-artist%
+;   %album%
+;   %date%
+;   %title%
+; Default: %artist% - %title%
+label-song = MPD 𝄞
+
+; Available tokens:
+;   %elapsed%
+;   %total%
+; Default: %elapsed% / %total%
+;label-time = %elapsed% / %total%
+
+; Available tokens:
+;   None
+label-offline = 🎜 mpd is offline
+
+; Only applies if <icon-X> is used
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
+
+; Used to display the state of random/repeat/repeatone/single
+; Only applies if <icon-[random|repeat|repeatone|single]> is used
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+
+; Only applies if <bar-progress> is used
+bar-progress-width = 10
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
 [module/date]
 type = internal/date
 interval = 5
@@ -298,7 +383,9 @@ time-alt = %H:%M:%S
 
 format-prefix = " "
 format-prefix-foreground = 
-format-underline = #0a6cf5
+format-underline = 0
+
+
 
 label = %date% %time%
 
