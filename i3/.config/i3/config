@@ -20,6 +20,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/scripts/alternating_layouts.py
 exec --no-startup-id dunst &
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id ckb-next &
+exec --no-startup-id polychromatic-controller &
 
 
 ###### Key Bindings ########################################################
