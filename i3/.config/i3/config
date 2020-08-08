@@ -10,18 +10,18 @@
 #-------------------------------------------------------------------#
 ###### Startup Apps ########################################################
 
-exec polybar example
-exec --no-startup-id $HOME/scripts/i3listen.py
-exec --no-startup-id feh --bg-scale $HOME/pix/WallpaperRetro.jpg
-exec picom --blur-method dual_kawase &
+#exec polybar example
+#exec --no-startup-id $HOME/scripts/i3listen.py
+exec --no-startup-id feh --bg-scale $HOME/pix/WallpaperForest.jpg
+exec --no-startup-id picom --blur-method dual_kawase &
 #exec discord &
 #exec telegram-desktop &
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/scripts/alternating_layouts.py
-exec --no-startup-id dunst &
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id ckb-next &
-exec --no-startup-id polychromatic-controller &
+#exec --no-startup-id dunst &
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id ckb-next &
+#exec --no-startup-id polychromatic-controller &
 
 
 ###### Key Bindings ########################################################
@@ -30,8 +30,8 @@ exec --no-startup-id polychromatic-controller &
 
 set $mod Mod1
 set $refresh_i3status killall -SIGUSR1 i3status
-set $ws1 "1"
-set $ws2 "2"
+set $ws2 "1"
+set $ws1 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -57,8 +57,11 @@ bindsym $mod+b exec firefox
 #Kill 
 bindsym $mod+Shift+q kill
 
+#dmenu
+bindsym $mod+space exec dmenu_run
+
 #Rofi
-bindsym $mod+space exec rofi -show drun -font "monospace 18" -show-icons
+#bindsym $mod+space exec rofi -show drun -font "monospace 18" -show-icons
 bindsym $mod+Tab exec rofi -show window -font "monospace 18" -show-icons
 
 #"Focus" Keys
@@ -165,3 +168,6 @@ gaps outer 14
 #smart_borders on
 #smart_borders no_gaps
 #border_radius 4
+bar {
+status_command i3blocks
+	     }
