@@ -1,5 +1,8 @@
 # .dotfiles  
   
+  for more up-to-date dotfiles see -> https://gitlab.com/ethannij/ethannij.dotfiles
+  
+  
 --These are my dotfiles as of now, they will be updated and fixed but here is what ive got right now. This is my first time using a tiling window manager so I am no expert.  
   
 https://imgur.com/a/cuYutwL
